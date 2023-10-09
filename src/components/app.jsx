@@ -3,11 +3,12 @@ const object = {
   subtitle: "Subtitle",
 };
 
-export const App = () => {
+export const App = ({number}) => {
   return (
     <>
       <h1>{object.title}</h1>
       <pre>{JSON.stringify(object)}</pre>
+      <p>{number + number}</p>
     </>
   );
 };
