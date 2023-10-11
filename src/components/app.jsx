@@ -15,6 +15,10 @@ export const App = ({ number }) => {
   );
 };
 
-App.prototype = {
+App.protoTypes = {
   number: PropTypes.number,
+};
+
+App.defaultProps = {
+  number: 2,
 };
