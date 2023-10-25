@@ -1,24 +1,23 @@
 import PropTypes from "prop-types";
 
-const object = {
-  title: "React Vite App",
-  subtitle: "Subtitle",
-};
-
-export const App = ({ number }) => {
+export const App = ({ title, subTitle, name }) => {
   return (
     <>
-      <h1>{object.title}</h1>
-      <pre>{JSON.stringify(object)}</pre>
-      <p>{number + number}</p>
+      <h1>{title}</h1>
+      {/* <p>{JSON.stringify(subTile)}</p> */}
+      <p>{subTitle}</p>
+      <p>{name}</p>
     </>
   );
 };
 
 App.protoTypes = {
-  number: PropTypes.number,
+  title: PropTypes.isRequired,
+  subTitle: PropTypes.string,
 };
 
 App.defaultProps = {
-  number: 2,
+  name: "First App",
+  subTitle: "No subtitle",
+  title: "No title",
 };
