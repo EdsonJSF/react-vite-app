@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test on <App /> should match with the snapshot 1`] = `
+<div>
+  <h1>
+    Hola
+  </h1>
+  <p>
+    No subtitle
+  </p>
+  <p>
+    First App
+  </p>
+</div>
+`;
