@@ -8,4 +8,20 @@ describe("Test on <App />", () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  test("should show the title in a h1 tag", () => {
+    const title = "Hola";
+    const { container, getByText, getByTestId } = render(<App title={title} />);
+
+    expect(getByText(title)).toBeTruthy();
+    expect(getByTestId("test-title").innerHTML).toContain(title);
+  });
+
+  test("should show the subtitle", () => {
+    const title = "Hola";
+    const subTitle = "subTitle";
+    const { getAllByText } = render(<App title={title} subTitle={subTitle} />);
+
+    expect(getAllByText(subTitle).length).toBe(2);
+  });
 });
