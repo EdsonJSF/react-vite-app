@@ -20,7 +20,7 @@ export const CounterApp = ({ value }) => {
   );
 };
 
-CounterApp.protoTypes = {
+CounterApp.propTypes = {
   value: PropTypes.number,
 };
 
